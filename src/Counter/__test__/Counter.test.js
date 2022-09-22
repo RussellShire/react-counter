@@ -7,7 +7,19 @@ test('header renders with correct text', () => {
     render(<Counter />);
     const header = screen.getByTestId('header')
 
-    expect(header.textContent).toBe('My Counter')
+    expect(header.value).toBe('Counter')
+})
+
+test('header can be edited', () => {
+    render(<Counter />);
+    const header = screen.getByTestId('header')
+    
+    fireEvent.change(header, {
+        target: {
+            value: 'New counter name'
+        }
+    })
+    expect(header.value).toBe('New counter name')
 })
 
 test('counter starts with text of zero', () => {

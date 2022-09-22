@@ -3,10 +3,24 @@ import React, { useState } from 'react';
 function Counter() {
     const [counterValue, setCounterValue] = useState(0)
     const [inputValue, setInputValue] = useState(1)
+    const [counterName, setCounterName] = useState('Counter')
 
     return (
-        <div>
-            <h3 data-testid='header'>My Counter</h3>
+        <div className='counter'>
+            <input 
+                type='text' 
+                data-testid='header' 
+                value={counterName}
+                onChange={(e) => {
+                    setCounterName(e.target.value)}}
+                style={{
+                    border: 'none',
+                    fontWeight: 'bold',
+                    fontSize: '1.5rem',
+                    textTransform: 'capitalize',
+                    marginTop: '1rem',
+                }}
+            ></input>
             <h1 data-testid='counter' type='number'>{counterValue}</h1>
             <div>
                 <button 
