@@ -2,9 +2,9 @@
 
 An app that allows you to create and rename multiple counters. Built using React and tested with Jest. Concieved as a way to track habits such as buying scratch cards or books read.
 
-<!-- # Hosted
+# Hosted
 
-https://russellshire.github.io/react-counter/ -->
+https://russellshire.github.io/react-counter/
 
 # Project specifications
 
